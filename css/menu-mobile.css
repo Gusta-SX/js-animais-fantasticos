@@ -1,0 +1,52 @@
+[data-menu="button"] {
+  display: none;
+}
+@media (max-width: 700px) {
+  .menu-div {
+    display: flex;
+    margin: 10px;
+  }
+  .js [data-menu="button"] {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: .5rem 1rem;
+    margin: 10px;
+    align-items: center;
+    z-index: 2;
+    height: 19px;
+  }
+  .js [data-menu="button"]::before {
+    content: '';
+    display: inline-block;
+    border-radius: 10px;
+    height: 3px;
+    width: 20px;
+    background: #222;
+    box-shadow: 0 6px #222, 0 -6px #222;
+    transition: .3s transform;
+  }
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+  .js #menu {
+    display: none;
+    position: absolute;
+    background: #fb5;
+    width: 160px;
+    z-index: 1;
+    padding: 60px 0 20px 0;
+    top: 0;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0, .2);
+  }
+  .js #menu.active {
+    display: block;
+    animation: show-right .3s forwards;
+  }
+  .js .dropdown-menu {
+    position: static;
+    border: none ;
+  }
+}

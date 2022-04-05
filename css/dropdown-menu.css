@@ -21,9 +21,9 @@
 }
 .dropdown-menu {
   position: absolute;
-  background-color: #f8a424;
+  background-color: #444d71;
   top: 36px;
-  border: 1px solid #808080bb;
+  box-shadow: 0 0 3px 0px #b1b1b1;
   z-index: 1;
 }
 .dropdown-menu::before {
@@ -33,7 +33,7 @@
   top: -10px;
   width: 0;
   height: 0;
-  border-bottom: 10px solid #f8a424;
+  border-bottom: 10px solid #444d71;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }

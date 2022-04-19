@@ -295,3 +295,26 @@ body {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+[data-semana]::after {
+  display: inline-block;
+  align-items: center;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #E54;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 2px solid #2e2e2e;
+}
+
+[data-semana].open::after {
+  background: #3F4;
+}
+
+.btc-price {
+  background: #3F4;
+  padding: .2rem .5rem;
+  font-weight: bold;
+  border-radius: 3px;
+}

@@ -24,8 +24,8 @@
     border-radius: 10px;
     height: 3px;
     width: 20px;
-    background: #222;
-    box-shadow: 0 6px #222, 0 -6px #222;
+    background: #adb4cf;
+    box-shadow: 0 6px #adb4cf, 0 -6px #adb4cf;
     transition: .3s transform;
   }
   .js [data-menu="button"].active::before {
@@ -34,7 +34,7 @@
   .js #menu {
     display: none;
     position: absolute;
-    background: #fb5;
+    background: #333a56;
     width: 160px;
     z-index: 1;
     padding: 60px 0 20px 0;

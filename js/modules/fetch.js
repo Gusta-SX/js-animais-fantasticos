@@ -1,6 +1,13 @@
 import initNumberAnime from './number-animation.js';
 
 export default function initFetch() {
+  function createAnimal(animal) {
+    const div = document.createElement('div');
+    div.classList.add('numero-animal');
+    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`
+    return div
+  };
+  
   async function fetchAnimals(url) {
     try {
       const animalsRes = await fetch(url);
@@ -15,14 +22,6 @@ export default function initFetch() {
     } catch (error) {
       console.log(error)
     }
-
-  };
-  
-  function createAnimal(animal) {
-    const div = document.createElement('div');
-    div.classList.add('numero-animal');
-    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`
-    return div
   };
   
   fetchAnimals('./animaisapi.json');  

@@ -1,23 +1,35 @@
-import initScrollSuave from './modules/scroll-suave.js';
+import ScrollSuave from './modules/scroll-suave.js';
+import Accordion from './modules/accordion.js';
+import Modal from './modules/modal.js';
+import TabNav from './modules/tabnav.js';
+import Tooltip from './modules/tooltip.js';
+
 import initAnimacaoScroll from './modules/animacao-scroll.js';
-import initAccordion from './modules/accordion.js';
-import initTabNav from './modules/tabnav.js';
-import initModal from './modules/modal.js';
-import initTooltip from './modules/tooltip.js';
 import initDropdown from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
-import initFetch from './modules/fetch.js';
 import initFuncionamento from './modules/functioning.js';
 import initBitcoin from './modules/bitcoin.js';
+import fetchAnimals from './modules/fetch.js';
 
-initModal();
-initScrollSuave();
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+scrollSuave.init();
+
+const accordion = new Accordion('[data-anime="accordion"] dt');
+accordion.init();
+
+const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
+tabNav.init();
+
+const modal = new Modal('[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]');
+modal.init();
+
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
+
+fetchAnimals('../../animaisapi.json', '.numeros-grid');
+
 initAnimacaoScroll();
-initAccordion();
-initTabNav();
-initTooltip();
 initDropdown();
 initMenuMobile();
-initFetch();
 initFuncionamento();
 initBitcoin();
